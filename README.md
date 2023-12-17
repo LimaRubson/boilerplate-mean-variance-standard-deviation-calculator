@@ -3,28 +3,27 @@
 This is the boilerplate for the Mean-Variance-Standard Deviation Calculator project. Instructions for building your project can be found at https://www.freecodecamp.org/learn/data-analysis-with-python/data-analysis-with-python-projects/mean-variance-standard-deviation-calculator
 
 # My collaboration in the project:
+The repository contains a file called mean_var_std.py, which includes a function named calculate. This function is designed to perform statistical calculations on a list of 9 digits, treating them as elements of a 3x3 matrix. The implementation uses the NumPy library to facilitate efficient processing of matrix operations and statistics.
 
-O repositório contém um arquivo chamado mean_var_std.py que contém uma função chamada calculate. Essa função é projetada para realizar cálculos estatísticos em uma lista de 9 dígitos, considerando-os como elementos de uma matriz 3x3. A implementação faz uso da biblioteca NumPy para facilitar o processamento eficiente de operações matriciais e estatísticas.
-
-## Assinatura da Função
+## Function Signature
 ```python
     import numpy as np
 
     def calculate(lst):
-        # Implementação da função
+        # Function implementation
 ```
-## Entrada
-A função calculate aceita um único parâmetro, lst, que deve ser uma lista contendo exatamente 9 elementos numéricos.
+## Input
+The calculate function accepts a single parameter, lst, which must be a list containing exactly 9 numeric elements.
 
-## Tratamento de Exceção
-Se a lista de entrada não contiver exatamente 9 elementos, a função levanta uma exceção ValueError com a mensagem "List must contain nine numbers."
+## Exception Handling
+If the input list does not contain exactly 9 elements, the function raises a ValueError exception with the message "List must contain nine numbers."
 
-## Processamento da Matriz
-A lista de entrada é convertida em uma matriz NumPy 3x3 usando np.array(lst).reshape(3, 3).
-Diversos cálculos estatísticos são então realizados na matriz, incluindo média, variância, desvio padrão, máximo, mínimo e soma, tanto ao longo das linhas quanto das colunas.
+## Matrix Processing
+The input list is converted into a NumPy 3x3 matrix using np.array(lst).reshape(3, 3).
+Various statistical calculations are then performed on the matrix, including mean, variance, standard deviation, maximum, minimum, and sum, both along the rows and columns.
 
-## Formato do Resultado
-A função retorna um dicionário contendo os resultados dos cálculos. O formato do dicionário é o seguinte:
+## Result Format
+The function returns a dictionary containing the results of the calculations. The format of the dictionary is as follows:
 ```python
 {
   'mean': [axis1, axis2, flattened],
@@ -36,9 +35,9 @@ A função retorna um dicionário contendo os resultados dos cálculos. O format
 }
 ```
 
-## Exemplo de Uso
+## Usage Example
 ```python
-# Exemplo de uso da função
+# Example of using the function
 result = calculate([0, 1, 2, 3, 4, 5, 6, 7, 8])
 print(result)
 ```
